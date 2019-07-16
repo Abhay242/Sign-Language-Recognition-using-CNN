@@ -60,5 +60,5 @@ cv2.destroyAllWindows()
 # In[4]:
 
 
-loaded_model.summary()
+# loaded_model.summary()
 
