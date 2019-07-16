@@ -26,7 +26,7 @@ tbCallBack = callbacks.TensorBoard(log_dir='./Graph', histogram_freq=0, write_gr
 # In[ ]:
 
 
-path='C:\\Users\\Legion\\Desktop\\project\\asl_alphabet_train'
+path="""path""" + '\\project\\asl_alphabet_train'
 all_files=glob.glob(path + "\\*.csv")
 li=0
 for filename in all_files:
@@ -39,8 +39,8 @@ for filename in all_files:
         print(frame.head())
     else:    
         frame = pd.concat([frame,df], ignore_index=True,sort=False)
-        print(frame.shape)    
-        print(frame.head())    
+        #print(frame.shape)    
+        #print(frame.head())    
 #frame = pd.concat(li, axis=0, ignore_index=True)
 #frame = pd.concat([] ignore_index=True)
 frame.to_pickle('.\\pixels_pickle.pkl')
@@ -50,11 +50,11 @@ frame.to_pickle('.\\pixels_pickle.pkl')
 
 
 #frame= pd.read_pickle('.\\pixels_pickle.pkl')
-print(frame.shape)
-print(frame.head())  
+#print(frame.shape)
+#print(frame.head())  
 frame = frame.sample(frac=1).reset_index(drop=True)
-print(frame.head())
-print(frame.shape)
+#print(frame.head())
+#print(frame.shape)
 
 
 # In[ ]:
@@ -69,19 +69,19 @@ frame.to_pickle('.\\pixels_pickle.pkl')
 frame = pd.read_pickle("./pixels_pickle.pkl")
 data = frame.values
 #data_cv=df_crossval.values
-print(np.shape(data))#,np.shape(data_cv))
+#print(np.shape(data))#,np.shape(data_cv))
 y = data[:, 0]
 #y_test=data_cv[:, 0]
-print(frame.head())
+#print(frame.head())
 
 
 # In[3]:
 
 
 pixels = data[:, 1:40001]
-print(np.shape(pixels))
-print(len(pixels[0]))
-print(pixels[10][10])
+#print(np.shape(pixels))
+#print(len(pixels[0]))
+#print(pixels[10][10])
 
 
 # In[4]:
@@ -108,7 +108,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 # In[7]:
 
 
-x =X
+x = X
 
 
 # In[8]:
