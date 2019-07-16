@@ -11,7 +11,7 @@ import numpy as np
 import os
 import random
 get_ipython().run_line_magic('matplotlib', 'inline')
-img_files = [f for f in os.walk('C:\\Users\\Legion\\Desktop\\project\\asl_alphabet_train\\asl_alphabet_train\\')] #if f.endswith('.jpg')]
+img_files = [f for f in os.walk("""path""" + '\\project\\asl_alphabet_train\\asl_alphabet_train\\')] #if f.endswith('.jpg')]
 print(len(img_files[1][2]))
 print(img_files[0][1])
 
@@ -21,7 +21,7 @@ print(img_files[0][1])
 
 for i in range(1,30):
     file_no=2000
-    print(i)
+    #print(i)
     for image in img_files[i][2]:
         if(file_no==0):
             break
